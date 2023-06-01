@@ -1,6 +1,6 @@
 package bordoesapi.bordoesapi.dominio.entidade;
 
-import bordoesapi.bordoesapi.api.models.ArtistaDto;
+import bordoesapi.bordoesapi.aplicacao.dto.ArtistaDto;
 import jakarta.persistence.*;
 
 import java.util.Objects;
@@ -18,8 +18,7 @@ public class Artista {
 
     public Artista(){}
 
-    public Artista(int id, String nome, String detalhe, String instagram, boolean habilitado) {
-        this.id = id;
+    public Artista(String nome, String detalhe, String instagram, boolean habilitado) {
         this.nome = nome;
         this.detalhe = detalhe;
         this.instagram = instagram;

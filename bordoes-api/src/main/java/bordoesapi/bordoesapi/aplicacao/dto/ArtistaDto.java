@@ -1,4 +1,4 @@
-package bordoesapi.bordoesapi.api.models;
+package bordoesapi.bordoesapi.aplicacao.dto;
 
 import bordoesapi.bordoesapi.dominio.entidade.Artista;
 

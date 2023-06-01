@@ -1,7 +1,7 @@
 package bordoesapi.bordoesapi.api.controllers;
 
-import bordoesapi.bordoesapi.api.models.ArtistaDto;
-import bordoesapi.bordoesapi.infraestrutura.services.ArtistaService;
+import bordoesapi.bordoesapi.aplicacao.dto.ArtistaDto;
+import bordoesapi.bordoesapi.aplicacao.servicos.ArtistaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,8 +18,8 @@ public class ArtistaController {
 
     @GetMapping
     public ResponseEntity<List<ArtistaDto>> getAll(){
-        List<ArtistaDto> artistasDt0 = artistaService.getAll();
-        return ResponseEntity.ok(artistasDt0);
+        List<ArtistaDto> artistas = artistaService.getAll();
+        return ResponseEntity.ok(artistas);
     }
     @GetMapping("/{id}")
     public ResponseEntity<ArtistaDto> getById(@PathVariable int id){
